@@ -16,17 +16,17 @@ O objetivo deste desafio é elaborar um conteúdo no estilo e qualidade _Trybe_ 
 
 ## Conteúdo
 
-- Um terço do tempo alocado para os estudos deve ser dedicado a conteudo a ser lido e aprendido, com exercícios de fixação acompanhando.
-- Todo o conteúdo deve ser original, feito **inteiramente por você**.
-- É desejável que exista uma seção de _Recursos Adicionais_, com links e referências de bons materiais acerca do tema.
+- Um terço do tempo alocado para os estudos deve ser dedicado a conteudo a ser lido e aprendido, com exercícios de fixação acompanhando;
+- Todo o conteúdo deve ser original, feito **inteiramente por você**;
+- É desejável que exista uma seção de _Recursos Adicionais_, com links e referências de bons materiais acerca do tema;
 - O conteúdo deve ser didático: seu texto deve ensinar o conteúdo a uma pessoa que não sabe nada do assunto. Não deve ser denso demais, mas de fácil digestão e com raciocínio fácil de acompanhar. "Seus saltos de raciocínio" devem ser pequenos.
 
 ## Exercícios
 
-- Dois terços do tempo alocados para a realização de exercícios acerca do tema.
-- Todos os exercícios devem ser originais, **inteiramente feitos por você**.
-- O enunciado dos exercícios deve ser claro e sem margem para subjetividade,
-- Todos os exercícios devem ter sua resolução proposta num **gabarito**. Tal gabarito deve respeitar as regras de acessibilidade, do code climate e deve ser um exemplo a ser seguido de qualidade de código. Ele não pode conter nada que a turma não tenha aprendido até aquele momento.
+- Dois terços do tempo alocados para a realização de exercícios acerca do tema;
+- Todos os exercícios devem ser originais, **inteiramente feitos por você**;
+- O enunciado dos exercícios deve ser claro e sem margem para subjetividade;
+- Todos os exercícios devem ter sua resolução proposta num **gabarito**. Tal gabarito deve respeitar as regras de acessibilidade, do code climate e deve ser um exemplo a ser seguido de qualidade de código. Ele não pode conter nada que a turma não tenha aprendido até aquele momento;
 - Devem haver exercícios bônus para quem terminar os exercícios mais rápido do que o esperado. Esses exercícios também precisam ter gabarito.
 
 ---
