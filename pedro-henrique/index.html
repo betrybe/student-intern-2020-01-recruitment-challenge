@@ -58,7 +58,23 @@
         <li>Selecione o elemento que possua o id "primeiro-circulo". Qual a sua cor? Imprima-a no console.</li>
         <li>Acesse o elemento de id "segundo-circulo". O que está escrito nele? Consegue deixar a letra maior?</li>
     </ol>
-    <h4>querySelector</h4>
+    <h4>querySelector e querySelectorAll</h4>
+    <p>O querySelector é um seletor mais versátil que aqueles que já aprendemos. Ele aceita qualquer uma das três formas
+        que já vimos para selecionar (id, classe e tag), podendo combinar ainda estas formas (veremos isso em um
+        exercício). A desvantagem de se usar o querySelector está no fato de ele só retornar o primeiro elemento
+        encontrado. Dessa forma, ele pode ser usado bem quando se tem apenas um elemento com certa tag ou classe, ou
+        para selecionar algo pelo id, ou então quando temos dentro de uma tag apenas um elemento com a classe que se
+        quer selecionar.</p>
+    <p>Sua sintaxe é document.querySelector('nome'). Para classes colocamos '.nomeDaClasse', para id colocamos '#id' e
+        para tag a escrita é igual</p>
+    <p>Já o querySelectorAll retorna todos os elementos de acordo com o nome buscado. Sua sintaxe é
+        document.querySelectorAll('nome') e seu retorno é uma NodeList.</p>
+    <ol>
+        <li>Faça os exercícios 1 e 2 da parte de getElementById utilizando querySelector</li>
+        <li>Selecione o elemento que possua a classe 'azul' dentro da tag 'h3', usando querySelector. Dica: h3.azul</li>
+        <li>Selecione o primeiro elemento que possua a tag 'h1' e altere seu texto.</li>
+        <li>Faça os exercícios 1, 2 e 3 da parte de getElementsByTagName utilizando querySelectorAll</li>
+    </ol>
     <h2>Parte 2: Hora de praticar!</h2>
     <h2>Exercícios Bônus</h2>
     <h2>Parte 3: Recursos adicionais</h2>
