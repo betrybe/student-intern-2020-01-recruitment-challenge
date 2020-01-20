@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Student Internship - Desafio Prático</title>
+</head>
+
+<body>
+    <main class="container">
+        <aside class="nav-list">
+            <h1>Nav-L</h1>
+        </aside>
+        <article class="content">
+            <h1>Event Listeners</h1>
+
+            <section>
+                <h2 id="subtitle">Coisas importantes a saber pra começar</h2 id="subtitle">
+                <p>
+                    Bom, pra começarmos, que tal entender a estrutura básica de um site e depois o que é um Event
+                    (evento),
+                    sabendo isso, o resto ficará muito mais fácil.
+                    Normalmente para fazer um site, temos 3 itens:
+                    <ul class="mx-10">
+                        <li>
+                            1) HTML, que normalmente é o responsável pelo conteúdo em si do site e a estruturação do
+                            mesmo.
+                        </li>
+                        <li>
+                            2) CSS, que responde pela estilização (tamanhos, cores, posicionamento dos itens...) do
+                            site.
+                        </li>
+                        <li>
+                            3) JavaScript, que faz a <span class="tachado">magia negra</span> criação de conteúdo que se
+                            atualiza
+                            dinamicamente, dá vida a caixas de texto, botões, imagens e por aí vai, quase tudo o que
+                            parece
+                            "vivo"
+                            em uma página, é feito com JavaScript ou JavaScript está envolvido.
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Após saber mais sobre a tríade que cria os sites, você também precisa saber que o JavaScript
+                    consegue
+                    trabalhar o CSS e o HTML dinamicamente, em tese, um programador poderia fazer todo um site
+                    apenas com JS (apesar de ser mais tranquilo para um iniciante usar um pouco de cada uma das três),
+                    <span class="tachado">não façam isso em casa</span>.
+                    Também é importante saber o conceito de DOM, (Document Object Model), porque é através dele que você
+                    consegue utilizar todo o poder que o JS pode te proporcionar, incluindo os Event Listeners que ainda
+                    não
+                    sabemos o que é, não é mesmo?
+                    O DOM é um modelo para criar, alterar, pegar e deletar os elementos na tela, então o DOM é a base
+                    que
+                    diz ao seu código JavaScript qual elemento que é pra ele causar influência.
+                    <hr class="mx-10">
+                    Ok, mas porque preciso saber de tudo isso antes, se eu só queria saber o que é um Event
+                    Listener?<br>
+                    A resposta, é que o Event, trabalha em cima do DOM, então se você não tiver idéia do que é o DOM,
+                    você
+                    simplesmente não tem como escolher que elemento quer alterar, ou então, onde quer inserir seu novo
+                    elemento (depois de qual elemento existente quer colocar o seu novo, ou dentro de qual elemento quer
+                    colocar o seu elemento novo).
+                </p>
+            </section>
+            <hr class="mx-10">
+            <section>
+                <h2 id="subtitle">Ok, mas e o Event Listener?</h2>
+                <p class="flexy">
+                    Calma lá que estamos chegando, no caso, todo elemento que você coloca na página (um bloco (div), um
+                    parágrafo de texto (p), uma caixa de
+                    texto (input), pode ser acessado pelo seu próprio nome de elemento, por uma classe CSS ou por um ID CSS,
+                    então a maneira que você escreve seu HTML, pode te ajudar muito a trabalhar mais facilmente com o JS.
+                    Por exemplo, imagine que você tem um formulário com 10 campos (Nome, Sobrenome, Endereço, CEP...) e você
+                    queira fazer alguma interação apenas com o campo do nome? Concorda que ter um jeito fácil de escolher
+                    apenas o campo input do nome iria ajudar muito na tarefa? Então lhe apresento o comando:
+    
+                    <span class="comandos">document.querySelector()</span>
+
+                    Vamos lá, o que isso faz:<br>
+                    Esse comando é o pegador de objetos do JavaScript, lembra que falamos sobre pegar um elemento por id ou classe, 
+                    dentro dos parenteses desse comando, vc digita o ID ou classe e ele te retorna o elemento para utilizar, temos abaixo o 
+                    exemplo de uma caixa input e do código dela em HTML, onde podemos ver a ID da caixa e onde colocamos o ID no comando, 
+                    um bônus seria colocar o resultado dentro de uma variável, como no exemplo abaixo:
+
+                    <span class="comandos ta-c">
+                        HTML:<br>
+                        <span class="some">'</span><<span class="some">'</span>type="text" value="Trybe" id="caixa-de-texto"><br><br>
+                        JavaScript:<br>
+                        const caixaTrybe = document.querySelector('#caixa-de-texto');
+                    </span>
+                </p>
+                Agora sim, com esse background todo, partiu Eventos!
+            </section>
+            <hr class="mx-10">
+            <section>
+                <h2 id="subtitle">O que é um evento?</h2>
+                <p>
+                    Um jeito de entender os eventos em JavaScript para uma página web, seria relacionar os eventos aos nervos do corpo humano, 
+                    onde todo estímulo pode (ou não), gerar uma reação.
+                    Cada coisa que você faz dentro de uma página web (apertar alguma tecla no teclado, clicar num item, preencher uma caixa...), 
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
