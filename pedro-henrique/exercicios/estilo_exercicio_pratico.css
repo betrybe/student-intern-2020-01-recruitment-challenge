@@ -1,4 +1,12 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    /* border: 1px red solid */
+}
 
+body {
+    margin: 40px;
+}
 
 strong {
     text-decoration: line-through;
@@ -13,4 +21,3 @@ strong {
     border-radius: 50%;
     border: 1px black solid
 }
-
