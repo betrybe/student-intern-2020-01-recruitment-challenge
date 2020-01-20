@@ -34,4 +34,4 @@ O objetivo deste desafio é elaborar um conteúdo no estilo e qualidade _Trybe_ 
 # Regras gerais
 
 - Redação do conteúdo deve estar gramaticalmente correta, no tom de voz e pessoa certas (se dirigindo diretamente a quem lê, como em "Você vai estudar...") e com linguagem neutra de gênero;
-- Será avaliada a corretude dos gabaritos, comentários e explicações.
+- Será avaliada a corretude dos gabaritos, comentários e explicações.Gabar

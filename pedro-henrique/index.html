@@ -14,36 +14,50 @@
     <h2>Parte 1: Teoria</h2>
     <h3>O que é DOM?</h3>
     <p>Antes de aprender a selecionar os elementos de nossa página é importante entender um pouco do conceito de DOM
-        (Document Object Model).O DOM é uma forma de interpretar uma página HTML de modo que fique orientada a objetos,
+        (Document Object Model). O DOM é uma forma de interpretar a página HTML de modo que fique orientada a objetos,
         podendo assim ser manipulada por alguma linguagem script. Esta linguagem script, como o javascript, consegue
-        acessar através de linhas de comando cada elemento da página, podendo selecioná-los, acessar propriedades e até
-        alteará-los.</p>
-    <p>Na imagem abaixo, podemos ver um exemplo da estrutura hierárquica de uma página HTML. Cada uma das 'Tags' é um
-        elemento acessível pela linguagem script.</p>
+        acessar através de linhas de códigos cada elemento da página, podendo selecioná-los, acessar suas propriedades e
+        até alteará-los.</p>
+    <p>Na imagem abaixo, retirada do site "tableless.com.br", podemos ver um exemplo da estrutura hierárquica de uma
+        página HTML. Cada uma das 'Tags' é um elemento acessível pela linguagem script.</p>
+    <img src="./images/dom_tree.gif">
     <p>O conceito de DOM parece ser algo complexo, porém, com o tempo, este ficará bem mais claro em sua cabeça. Na
         próxima sessão aprenderemos a selecionar os elementos da paǵina HTML e dessa forma começaremos a perceber o
         poder do DOM!</p>
     <h3>Seletores de elementos</h3>
     <p>Nesta sessão, aprenderemos sobre os principais seletores da linguagem JavaScript. Para cada seletor, faremos
-        exercícios de fixação. Os exercícios de fixação deverão ser realizados no console do próprio navegador, e serão
-        baseados <a href="./exercicios/exercicios_fixacao.html" target="_blank">nesta página</a>.</p>
+        exercícios de fixação, que deverão ser realizados no console do próprio navegador, e serão
+        baseados <a href="./exercicios/exercicios_fixacao.html" target="_blank">nesta página</a>. O gabarito dos
+        exercícios pode ser acessado <a href="./exercicios/gabarito_exercicios_fixacao" target="_blank">aqui</a>.
+    </p>
     <p>Vamoooos?</p>
     <h4>1 - getElementsByTagName</h4>
     <p>O primeiro seletor que aprenderemos será o getElementsByTagName. Sua sintaxe é
-        document.getElementsByTagName('nomeDaTag'). O retorno será um HTMLCollection.</p>
-    <p>HTMLCollection é uma coleção de nós, cada um contendo uma das tags do documento. Cada um desses nós podem ser
-        acessados por meio de índices.</p>
-    <p>A principal propriedade do HTMLCollection é length.</p>
+        document.getElementsByTagName('nomeDaTag'). O retorno será um HTMLCollection. HTMLCollection é uma coleção de
+        nós, cada um contendo um dos elementos selecionados do documento. Cada um desses nós podem ser acessados por
+        meio de índices.</p>
+    <h5>Exemplos</h5>
+    <ul>
+        <li>Selecionar todas as tags "h4": document.getElementsByTagName('h4') </li>
+        <li>Selecionar a segunda tag "h1": document.getElementsByTagName('h1')[1] </li>
+        <li>Exibir o texto da primeira tag "p": document.getElementsByTagName('p')[0].innerHTML </li>
+    </ul>
     <h5>Exercícios de fixação</h5>
     <ol>
-        <li>Quantas tags são 'h1', 'p' e 'div', respectivamente?</li>
-        <li>Selecione as todas as tags 'h2'. O que é imprimido no console?</li>
-        <li>Acesse o segundo 'h3'. Qual o texto dele? Consegue alterá-lo para "Círculos!"? Dica: utilize a propriedade
-            '.innerHTML'</li>
+        <li>Quantas tags são 'h1', 'p' e 'div', respectivamente? Dica: utilize o método ".length"</li>
+        <li>Selecione todos os elementos com a tag 'h2'. O que é imprimido no console?</li>
+        <li>Acesse o segundo elemento com a tag 'h3'. Qual o texto dele? Consegue alterá-lo para "Círculos!"?</li>
     </ol>
     <h4>2 - getElementsByClassName</h4>
     <p>O segundo seletor que aprenderemos será o getElementsByClassName. Sua sintaxe é
         document.getElementsByClassName('nomeDaClasse'). O retorno também será um HTMLCollection.</p>
+    <h5>Exemplos</h5>
+    <ul>
+        <li>Selecionar todos os elementos da classe "gatos": document.getElementsByClassName('gatos') </li>
+        <li>Selecionar o terceiro elemento com a classe "colorido": document.getElementsByClassName('colorido')[2] </li>
+        <li>Exibir os estilos do primeiro elemento que possua a classe "invisivel":
+            document.getElementsByClassName('invisivel')[0].style </li>
+    </ul>
     <h5>Exercícios de fixação</h5>
     <ol>
         <li>Quantos elementos possuem as classes "verde" e "vermelho", respectivamente?</li>
@@ -56,6 +70,11 @@
     <p>O terceiro seletor que aprenderemos será o getElementById. Sua sintaxe é
         document.getElementById('nomeDoId'). O retorno não será um HTMLCollection. Por quê? Ora, se o id é
         individual do elemento, não há porque este seletor retornar diversos elementos!</p>
+    <h5>Exemplos</h5>
+    <ul>
+        <li>Selecionar o elemento com o id "primeiraDiv": document.getElementById('primeiraDiv') </li>
+        <li>Acessar o texto do elemento com o id "pratoPrincipal": document.getElementById('primeiraDiv').innerHTML</li>
+    </ul>
     <h5>Exercícios de fixação</h5>
     <ol>
         <li>Selecione o elemento que possua o id "primeiro-circulo". Qual a sua cor? Consegue mudá-la para amarelo?.
@@ -70,9 +89,16 @@
         para selecionar algo pelo id, ou então quando temos dentro de uma tag apenas um elemento com a classe que se
         quer selecionar.</p>
     <p>Sua sintaxe é document.querySelector('nome'). Para classes colocamos '.nomeDaClasse', para id colocamos '#id' e
-        para tag a escrita é igual</p>
+        para tag a escrita é igual.</p>
     <p>Já o querySelectorAll retorna todos os elementos de acordo com o nome buscado. Sua sintaxe é
         document.querySelectorAll('nome') e seu retorno é uma NodeList.</p>
+    <h5>Exemplos</h5>
+    <ul>
+        <li>Selecionar o elemento que possua o id "materia-principal": document.querySelector("#gato-principal")</li>
+        <li>Selecionar o primeiro elemento que possua a classe "sublinhado": document.querySelector(".sublinhado")</li>
+        <li>Exibir o texto do primeiro elemento que possua a tag "p": document.querySelector("p").innerHTML</li>
+        <li>Selecionar o segundo elemento que possua a classe "colorido": document.querySelectorAll(".colorido")[1]</li>
+    </ul>
     <h5>Exercícios de fixação</h5>
     <ol>
         <li>Faça os exercícios 1 e 2 da parte de getElementById utilizando querySelector</li>
@@ -82,27 +108,29 @@
     </ol>
     <h2>Parte 2: Hora de praticar!</h2>
     <p>Nesta segunda parte da aula, faremos um exercício para aplicar o conteúdo que vimos anteriormente.</p>
-    <p>Crie 3 aquivos com os nomes <a href="./exercicios/exercicio_pratico" target="blank">'exercicio_pratico.html'</a>,
-        <a href="./exercicios/estilo_exercicio_pratico" target="blank">'estilo_exercicio_pratico.css</a> e
-        <a href="./exercicios/script_exercicio_pratico" target="blank">'script_exercicio_pratico.js</a>. Ao clicar nos
+    <p>Crie 3 aquivos com os nomes "<a href="./exercicios/exercicio_pratico" target="blank">exercicio_pratico.html</a>",
+        "<a href="./exercicios/estilo_exercicio_pratico" target="blank">estilo_exercicio_pratico.css</a>" e
+        "<a href="./exercicios/script_exercicio_pratico" target="blank">script_exercicio_pratico.js</a>". Ao clicar nos
         nomes você será redirecionado para a página contendo o código que
         deverá ter em cada arquivo. Para o exercício, você deverá modificar apenas o arquivo
         'script_exercicio_pratico.js.</p>
     <p>É recomendavel utilizar pelo menos uma vez cada um dos seletores aprendidos nesta aula :)</p>
+    <p>Simboooora!!!!</p>
     <ol>
         <li>Ao pressionar o botão Ex 1, corrija o nome da empresa responsável por modernizar o ensino de tecnologia no
-            Brasil e coloque um fundo bem legal, de preferência da cor do símbolo!</li>
-        <li>Ao pressionar o botão Ex 2, corrija o valor mínimo para pagar a Trybe, além de trocar o traço que
+            Brasil :) e coloque um fundo bem legal, de preferência da cor do símbolo da Trybe!</li>
+        <li>Ao pressionar o botão Ex 2, corrija o valor mínimo para começar a pagar a Trybe, além de trocar o traço que
             está riscando o valor para um que esteja apenas sublinhando-o.</li>
-        <li>Ao pressionar o botão Ex 3, faça com que os intens de índice par da lista de 'Quem pode aplicar' tenham a
+        <li>Ao pressionar o botão Ex 3, faça com que os itens de índice par da lista de 'Quem pode aplicar' tenham a
             fonte em vermelho.</li>
         <li>Ao pressionar o botão Ex 4, arrume as disciplinas curriculares para que elas fiquem lado a lado, com o
             display 'flex'.</li>
-        <li>Ao pressionar o botão Ex 5, adicione uma nova linguagem de programação ao currículo da Trybe no último círculo</li>
+        <li>Ao pressionar o botão Ex 5, adicione uma nova linguagem de programação ao currículo da Trybe no último
+            círculo</li>
         <li>Ao pressionar o botão Ex 6, altere o formato do círculo para um retângulo no elemento do currículo que você
             considera o mais importante para aprender.</li>
-        <li>Ao pressionar o botão Ex 7, colora alternadamente de azul e vermelho os elementos do currículo da Trybe. Use
-            necessariamente 'for' e 'if'</li>
+        <li>Ao pressionar o botão Ex 7, colora alternadamente de azul e vermelho os elementos do currículo da Trybe.
+            Sugestão: use 'for' e 'if'</li>
         <li>Ao pressionar o botão Ex 8, altere o tamanho da fonte do nome do "Alberto" para 35px</li>
     </ol>
 
