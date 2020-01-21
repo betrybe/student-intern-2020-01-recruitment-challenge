@@ -50,6 +50,7 @@ header {
 
 main {
   margin-left: 22%;
+  margin-bottom: 120px;
   width: 50%;
 }
 
@@ -79,4 +80,10 @@ p {
   padding: 5px 20px 20px;
   width: 120px;
   background: darkgray;
+}
+
+a {
+  color: #0fa36b;
+  font-size: 20px;
+  background-color: transparent;
 }
