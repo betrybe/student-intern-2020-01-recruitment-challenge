@@ -1,0 +1,22 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 40px;
+}
+
+strong {
+    text-decoration: line-through;
+    font: red;
+}
+
+.circulo {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    border: 1px black solid
+}

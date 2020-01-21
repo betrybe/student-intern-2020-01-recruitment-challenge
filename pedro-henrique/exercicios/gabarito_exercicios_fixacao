@@ -1,0 +1,48 @@
+Gabarito Exercícios de Fixação:
+
+-> getElementsByTagName
+1: 
+    document.getElementsByTagName("h1").length
+    document.getElementsByTagName("p").length
+    document.getElementsByTagName("div").length
+
+2:
+    document.getElementsByTagName("h2")
+
+3:
+    document.getElementsByTagName("h3")[1].innerHTML = "Círculos!"
+
+-> getElementsByClassName
+1:
+    document.getElementsByClassName("verde").length
+    document.getElementsByClassName("verde").length
+
+2:
+    document.getElementsByClassName("azul")
+
+3:
+    document.getElementsByClassName("azul")[2].style.backgroundColor = "red"
+
+-> getElementById
+1:
+    document.getElementById("primeiro-circulo").style.backgroundColor = "yellow"
+2:
+    document.getElementById("segundo-circulo").style.fontSize = "50px"
+
+-> querySelector e querySelectorAll
+1:
+    document.querySelector("#primeiro-circulo").style.backgroundColor = "yellow"
+    document.querySelector("#segundo-circulo").style.fontSize = "50px"
+2:
+    document.querySelector("h3.azul")
+3:
+    document.querySelector("h1").innerHTML = "Texto alterado"
+4:
+    document.querySelectorAll("h1").length
+    document.querySelectorAll("p").length
+    document.querySelectorAll("div").length
+
+    document.querySelectorAll("h2")
+
+    document.querySelectorAll("h3")[1].innerHTML = "Círculos!"
+

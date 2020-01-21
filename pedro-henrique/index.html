@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Seletor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Seletores de elementos do DOM com JavaScript</h1>
+    <h2>Parte 1: Teoria</h2>
+    <h3>O que é DOM?</h3>
+    <p>Antes de aprender a selecionar os elementos de nossa página é importante entender um pouco do conceito de DOM
+        (Document Object Model). O DOM é uma forma de interpretar a página HTML de modo que fique orientada a objetos,
+        podendo assim ser manipulada por alguma linguagem script. Esta linguagem script, como o javascript, consegue
+        acessar através de linhas de códigos cada elemento da página, podendo selecioná-los, acessar suas propriedades e
+        até alteará-los.</p>
+    <p>Na imagem abaixo, retirada do site "tableless.com.br", podemos ver um exemplo da estrutura hierárquica de uma
+        página HTML. Cada uma das 'Tags' é um elemento acessível pela linguagem script.</p>
+    <img src="./images/dom_tree.gif">
+    <p>O conceito de DOM parece ser algo complexo, porém, com o tempo, este ficará bem mais claro em sua cabeça. Na
+        próxima sessão aprenderemos a selecionar os elementos da paǵina HTML e dessa forma começaremos a perceber o
+        poder do DOM!</p>
+    <h3>Seletores de elementos</h3>
+    <p>Nesta sessão, aprenderemos sobre os principais seletores da linguagem JavaScript. Para cada seletor, faremos
+        exercícios de fixação, que deverão ser realizados no console do próprio navegador, e serão
+        baseados <a href="./exercicios/exercicios_fixacao.html" target="_blank">nesta página</a>. O gabarito dos
+        exercícios pode ser acessado <a href="./exercicios/gabarito_exercicios_fixacao" target="_blank">aqui</a>.
+    </p>
+    <p>Vamoooos?</p>
+    <h4>1 - getElementsByTagName</h4>
+    <p>O primeiro seletor que aprenderemos será o getElementsByTagName. Sua sintaxe é
+        document.getElementsByTagName('nomeDaTag'). O retorno será um HTMLCollection. HTMLCollection é uma coleção de
+        nós, cada um contendo um dos elementos selecionados do documento. Cada um desses nós podem ser acessados por
+        meio de índices.</p>
+    <h5>Exemplos</h5>
+    <ul>
+        <li>Selecionar todas as tags "h4": document.getElementsByTagName('h4') </li>
+        <li>Selecionar a segunda tag "h1": document.getElementsByTagName('h1')[1] </li>
+        <li>Exibir o texto da primeira tag "p": document.getElementsByTagName('p')[0].innerHTML </li>
+    </ul>
+    <h5>Exercícios de fixação</h5>
+    <ol>
+        <li>Quantas tags são 'h1', 'p' e 'div', respectivamente? Dica: utilize o método ".length"</li>
+        <li>Selecione todos os elementos com a tag 'h2'. O que é imprimido no console?</li>
+        <li>Acesse o segundo elemento com a tag 'h3'. Qual o texto dele? Consegue alterá-lo para "Círculos!"?</li>
+    </ol>
+    <h4>2 - getElementsByClassName</h4>
+    <p>O segundo seletor que aprenderemos será o getElementsByClassName. Sua sintaxe é
+        document.getElementsByClassName('nomeDaClasse'). O retorno também será um HTMLCollection.</p>
+    <h5>Exemplos</h5>
+    <ul>
+        <li>Selecionar todos os elementos da classe "gatos": document.getElementsByClassName('gatos') </li>
+        <li>Selecionar o terceiro elemento com a classe "colorido": document.getElementsByClassName('colorido')[2] </li>
+        <li>Exibir os estilos do primeiro elemento que possua a classe "invisivel":
+            document.getElementsByClassName('invisivel')[0].style </li>
+    </ul>
+    <h5>Exercícios de fixação</h5>
+    <ol>
+        <li>Quantos elementos possuem as classes "verde" e "vermelho", respectivamente?</li>
+        <li>Selecione a classe "azul". O que é imprimido no console?</li>
+        <li>Acesse o terceiro elemento da classe "azul". Qual a cor do fundo dele? Consegue alterá-la para vermelho?
+            Dica: utilize a
+            propriedade '.style'</li>
+    </ol>
+    <h4>3 - getElementById</h4>
+    <p>O terceiro seletor que aprenderemos será o getElementById. Sua sintaxe é
+        document.getElementById('nomeDoId'). O retorno não será um HTMLCollection. Por quê? Ora, se o id é
+        individual do elemento, não há porque este seletor retornar diversos elementos!</p>
+    <h5>Exemplos</h5>
+    <ul>
+        <li>Selecionar o elemento com o id "primeiraDiv": document.getElementById('primeiraDiv') </li>
+        <li>Acessar o texto do elemento com o id "pratoPrincipal": document.getElementById('primeiraDiv').innerHTML</li>
+    </ul>
+    <h5>Exercícios de fixação</h5>
+    <ol>
+        <li>Selecione o elemento que possua o id "primeiro-circulo". Qual a sua cor? Consegue mudá-la para amarelo?.
+        </li>
+        <li>Acesse o elemento de id "segundo-circulo". O que está escrito nele? Consegue deixar a letra maior?</li>
+    </ol>
+    <h4>4 - querySelector e querySelectorAll</h4>
+    <p>O querySelector é um seletor mais versátil que aqueles que já aprendemos. Ele aceita qualquer uma das três formas
+        que já vimos para selecionar (id, classe e tag), podendo combinar ainda estas formas (veremos isso em um
+        exercício). A desvantagem de se usar o querySelector está no fato de ele só retornar o primeiro elemento
+        encontrado. Dessa forma, ele pode ser usado bem quando se tem apenas um elemento com certa tag ou classe, ou
+        para selecionar algo pelo id, ou então quando temos dentro de uma tag apenas um elemento com a classe que se
+        quer selecionar.</p>
+    <p>Sua sintaxe é document.querySelector('nome'). Para classes colocamos '.nomeDaClasse', para id colocamos '#id' e
+        para tag a escrita é igual.</p>
+    <p>Já o querySelectorAll retorna todos os elementos de acordo com o nome buscado. Sua sintaxe é
+        document.querySelectorAll('nome') e seu retorno é uma NodeList.</p>
+    <h5>Exemplos</h5>
+    <ul>
+        <li>Selecionar o elemento que possua o id "materia-principal": document.querySelector("#materia-principal")</li>
+        <li>Selecionar o primeiro elemento que possua a classe "sublinhado": document.querySelector(".sublinhado")</li>
+        <li>Exibir o texto do primeiro elemento que possua a tag "p": document.querySelector("p").innerHTML</li>
+        <li>Selecionar o segundo elemento que possua a classe "colorido": document.querySelectorAll(".colorido")[1]</li>
+    </ul>
+    <h5>Exercícios de fixação</h5>
+    <ol>
+        <li>Faça os exercícios 1 e 2 da parte de getElementById utilizando querySelector</li>
+        <li>Selecione o elemento que possua a classe 'azul' dentro da tag 'h3', usando querySelector. Dica: h3.azul</li>
+        <li>Selecione o primeiro elemento que possua a tag 'h1' com o comando querySelector e altere seu texto.</li>
+        <li>Faça os exercícios 1, 2 e 3 da parte de getElementsByTagName utilizando querySelectorAll</li>
+    </ol>
+    <h2>Parte 2: Hora de praticar!</h2>
+    <p>Nesta segunda parte da aula, faremos um exercício para aplicar o conteúdo que vimos anteriormente.</p>
+    <p>Crie 3 aquivos com os nomes "<a href="./exercicios/exercicio_pratico" target="blank">exercicio_pratico.html</a>",
+        "<a href="./exercicios/estilo_exercicio_pratico.css" target="blank">estilo_exercicio_pratico.css</a>" e
+        "<a href="./exercicios/script_exercicio_pratico.js" target="blank">script_exercicio_pratico.js</a>". Ao clicar nos
+        nomes você será redirecionado para a página contendo o código que
+        deverá ter em cada arquivo. Para o exercício, você deverá modificar apenas o arquivo
+        'script_exercicio_pratico.js.</p>
+    <p>O gabarito pode ser visualizado <a href="./exercicios/gabarito_script_exercicio_pratico.js"
+            target="blank">aqui</a>.</p>
+    <p>É recomendavel utilizar pelo menos uma vez cada um dos seletores aprendidos nesta aula :)</p>
+    <p>Simboooora!!!!</p>
+    <ol>
+        <li>Ao pressionar o botão Ex 1, corrija o nome da empresa responsável por modernizar o ensino de tecnologia no
+            Brasil :) e coloque um fundo bem legal, de preferência da cor do símbolo da Trybe!</li>
+        <li>Ao pressionar o botão Ex 2, corrija o valor mínimo para começar a pagar a Trybe, além de trocar o traço que
+            está riscando o valor para um que esteja apenas sublinhando-o.</li>
+        <li>Ao pressionar o botão Ex 3, faça com que os itens de índice par da lista de 'Quem pode aplicar' tenham a
+            fonte em vermelho.</li>
+        <li>Ao pressionar o botão Ex 4, arrume as disciplinas curriculares para que elas fiquem lado a lado, com o
+            display 'flex'.</li>
+        <li>Ao pressionar o botão Ex 5, adicione uma nova linguagem de programação ao currículo da Trybe no último
+            círculo.</li>
+        <li>Ao pressionar o botão Ex 6, altere o formato do círculo para um retângulo no elemento do currículo que você
+            considera o mais importante para aprender.</li>
+        <li>Ao pressionar o botão Ex 7, colora alternadamente de azul e vermelho os elementos do currículo da Trybe.
+            Sugestão: use 'for' e 'if'</li>
+        <li>Ao pressionar o botão Ex 8, altere o tamanho da fonte do nome do "Alberto" para 35px</li>
+    </ol>
+
+    <h2>Exercícios Bônus</h2>
+    <ul>
+        <li>Ao clicar no botão Ex 9, centralize o nome da Trybe e aumente o tamanho da fonte</li>
+        <li>Ao clicar no botão Ex 10, altere o fundo de todas as tags 'h2' para o verde da Trybe</li>
+        <li>Ao clicar no botão Ex 11, altere para 35px o nome de todos os Devs </li>
+    </ul>
+    <h2>Parte 3: Recursos adicionais</h2>
+    <ul>
+        <li><a href="http://flukeout.github.io/" target="_blank">Seletor CSS gamificado :)</a></li>
+        <li><a href="https://teamtreehouse.com/community/understanding-the-difference-between-an-htmlcollection-and-a-nodelist"
+                target="_blank">Diferença entre HTMLCollection e NodeList</a></li>
+        <li><a href="https://tableless.com.br/tenha-o-dom/" target="_blank">Desbravando o DOM. Tenha o DOM rsrs</a></li>
+    </ul>
+    <script src="script.js"></script>
+</body>
+
+</html>
