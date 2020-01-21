@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
   <title>HTML SEMÂNTICO</title>
 </head>
 <body>
@@ -13,11 +14,30 @@
   </header>
   <nav>
     <ul>
-      <li>O que é HTML semântico?</li>
-      <li>Porque utilizar ele em meus trabalhos?</li>
-      <li>Quais são as </li>
+      <li>Divs?</li>
+      <li>O que é?</li>
+      <li>Porque utilizar?</li>
+      <li>Tags</li>
+      <li>Exercícios</li>
     </ul>
   </nav>
+    <main>
+      <section>
+        <article>
+          <h2>O problema da tag &lt;div&gt;</h2>
+          <p>Ao elaborar suas primeiras páginas em HTML, muito provaelmente você se utilizou das tags <strong>div</strong> para dividir as muitas seções de seu arquivo, bem como a tag <strong>p</strong> para designar o texto atribuído. Algo similar como a estrutura da imagem abaixo:</p>
+          <img src = oldHtml.png width = '10%' alt = 'imagem editada de https://internetingishard.com/html-and-css/semantic-html/'>
+          <p>Note, todavia, que a elaboração de um site com todas as marcações iguais pode causar muitas dores de cabeça em vários sentidos. Em primeiro lugar, caso um outro desenvolvedor (diferente de quem criou a página) precise fazer alterações na página, certamente será gasto muito tempo somente para ler o arquivo HTML e compreender, ao final, qual parte se refere ao menu principal, qual dos trechos se trata de um artigo, qual deles aborda uma seção, qual das <strong>divs</strong> está o rodapé (isso se existe um!) e por aí vai.</p>
+          <p>Fazendo uma breve comparação, imagine que você tem que pagar um boleto num banco e, ao chegar lá, você se depara com várias portas, <strong>todas elas escritas 'sessão'.</strong> Como você saberá, olhando essas portas, qual das portas te levará até o caixa? Você passará muito tempo abrindo várias portas e inspecionando para, finalmente, descobrir qual das salas é a que te interessa.</p>
+          <p>E o problema de organizar tudo em <strong>divs</strong> não para por aí! Uma página web com marcações que não são intuitivas geram enormes problemas para softwares de acessibilidade e leitura de tela, que, assim como nós, humanos, não sabemos a que seção cada texto se refere quando ele está envolto numa mera tag<strong>div</strong>. Da mesma forma, mecanismos de pesquisa (como o google) terão dificuldade de indexar sua página porque também não sabem qual é o conteúdo priuncipal, menu e etc.</p>
+          <p>Pensando em resolver esses vários problemas, a mais nova implementação do HTML trouxe, como novidade, as chamadas tags semânticas, que auxiliam usuários e desenvolvedores a uma melhor compreensão de cada uma das marcações.</p>
+        </article>
+        <article>
+          <h2>HTML semântico: conceitos</h2>
+          <p>Semântica, por definição, quer dizer "o estudo do significado das palavras". Aplicado isso à linguagem HTML, temos que <strong>HTML semântico consiste na aplicação de tags com nomes que têm um significado</strong>. </p>
+        </article>
+      </section>
+    </main>
   
 </body>
 </html>
