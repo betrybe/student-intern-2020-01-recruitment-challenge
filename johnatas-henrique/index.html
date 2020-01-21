@@ -10,21 +10,31 @@
 </head>
 
 <body>
+    <h1 class="para-cego-ver">Student Internship - Desafio Prático</h1>
     <main class="container">
         <aside class="nav-list">
-            <h1>Nav-L</h1>
+            <div class="sticky">
+                <h1 class="para-cego-ver">Barra de Navegação</h1>
+                <ul class="ta-c">
+                    <li><a href="#link1">No início era...</a></li>
+                    <li><a href="#link2">Mas e o Event Listener?</a></li>
+                    <li><a href="#link3">O que é um evento?</a></li>
+                    <li><a href="#link4">A primeira vez...</a></li>
+                    <li><a href="#link5">Entendendo a mágica</a></li>
+                </ul>
+            </div>
         </aside>
         <article class="content">
-            <h1>Event Listeners</h1>
+            <h1 class="title">Event Listeners</h1>
 
             <section>
-                <h2 id="subtitle">Coisas importantes a saber pra começar</h2 id="subtitle">
+                <h2 id="link1" class="subtitle">No início era...</h2>
                 <p>
                     Bom, pra começarmos, que tal entender a estrutura básica de um site e depois o que é um Event
                     (evento),
                     sabendo isso, o resto ficará muito mais fácil.
                     Normalmente para fazer um site, temos 3 itens:
-                    <ul class="mx-10">
+                    <ul class="my-10">
                         <li>
                             1) HTML, que normalmente é o responsável pelo conteúdo em si do site e a estruturação do
                             mesmo.
@@ -49,6 +59,8 @@
                     trabalhar o CSS e o HTML dinamicamente, em tese, um programador poderia fazer todo um site
                     apenas com JS (apesar de ser mais tranquilo para um iniciante usar um pouco de cada uma das três),
                     <span class="tachado">não façam isso em casa</span>.
+                </p>
+                <p class="my-10">
                     Também é importante saber o conceito de DOM, (Document Object Model), porque é através dele que você
                     consegue utilizar todo o poder que o JS pode te proporcionar, incluindo os Event Listeners que ainda
                     não
@@ -56,54 +68,144 @@
                     O DOM é um modelo para criar, alterar, pegar e deletar os elementos na tela, então o DOM é a base
                     que
                     diz ao seu código JavaScript qual elemento que é pra ele causar influência.
-                    <hr class="mx-10">
+                </p>
+
+                <p>
                     Ok, mas porque preciso saber de tudo isso antes, se eu só queria saber o que é um Event
-                    Listener?<br>
-                    A resposta, é que o Event, trabalha em cima do DOM, então se você não tiver idéia do que é o DOM,
-                    você
-                    simplesmente não tem como escolher que elemento quer alterar, ou então, onde quer inserir seu novo
-                    elemento (depois de qual elemento existente quer colocar o seu novo, ou dentro de qual elemento quer
-                    colocar o seu elemento novo).
+                    Listener?
+                </p>
+                <p class="importante my-10">
+                    Todo evento, trabalha em cima do DOM, então se você não tiver idéia do que é o DOM,
+                    você simplesmente não tem como escolher que elemento quer alterar, ou então, onde quer inserir seu
+                    novo
+                    elemento.
                 </p>
             </section>
-            <hr class="mx-10">
+            <hr class="my-10">
             <section>
-                <h2 id="subtitle">Ok, mas e o Event Listener?</h2>
+                <h2 id="link2" class="subtitle">Mas e o Event Listener?</h2>
                 <p class="flexy">
                     Calma lá que estamos chegando, no caso, todo elemento que você coloca na página (um bloco (div), um
                     parágrafo de texto (p), uma caixa de
-                    texto (input), pode ser acessado pelo seu próprio nome de elemento, por uma classe CSS ou por um ID CSS,
-                    então a maneira que você escreve seu HTML, pode te ajudar muito a trabalhar mais facilmente com o JS.
-                    Por exemplo, imagine que você tem um formulário com 10 campos (Nome, Sobrenome, Endereço, CEP...) e você
-                    queira fazer alguma interação apenas com o campo do nome? Concorda que ter um jeito fácil de escolher
+                    texto (input), pode ser acessado pelo seu próprio nome de elemento, por uma classe CSS ou por um ID
+                    CSS,
+                    então a maneira que você escreve seu HTML, pode te ajudar muito a trabalhar mais facilmente com o
+                    JS.<br>
+                    Por exemplo, imagine que você tem um formulário com 10 campos (Nome, Sobrenome, Endereço, CEP...) e
+                    você
+                    queira fazer alguma interação apenas com o campo do nome? Concorda que ter um jeito fácil de
+                    escolher
                     apenas o campo input do nome iria ajudar muito na tarefa? Então lhe apresento o comando:
-    
+
                     <span class="comandos">document.querySelector()</span>
 
                     Vamos lá, o que isso faz:<br>
-                    Esse comando é o pegador de objetos do JavaScript, lembra que falamos sobre pegar um elemento por id ou classe, 
-                    dentro dos parenteses desse comando, vc digita o ID ou classe e ele te retorna o elemento para utilizar, temos abaixo o 
-                    exemplo de uma caixa input e do código dela em HTML, onde podemos ver a ID da caixa e onde colocamos o ID no comando, 
+                    Esse comando é o pegador de objetos do JavaScript, lembra que falamos sobre pegar um elemento por id
+                    ou classe,
+                    dentro dos parenteses desse comando, vc digita o ID ou classe e ele te retorna o elemento para
+                    utilizar, temos abaixo o
+                    exemplo de uma caixa input e do código dela em HTML, onde podemos ver a ID da caixa e onde colocamos
+                    o ID no comando,
                     um bônus seria colocar o resultado dentro de uma variável, como no exemplo abaixo:
 
                     <span class="comandos ta-c">
                         HTML:<br>
-                        <span class="some">'</span><<span class="some">'</span>type="text" value="Trybe" id="caixa-de-texto"><br><br>
-                        JavaScript:<br>
-                        const caixaTrybe = document.querySelector('#caixa-de-texto');
+                        <span class="some">'</span>
+                        <<span class="some">'
+                    </span>type="text" value="Trybe" id="caixa-de-texto"><br><br>
+                    JavaScript:<br>
+                    const caixaTrybe = document.querySelector('#caixa-de-texto');
                     </span>
                 </p>
-                Agora sim, com esse background todo, partiu Eventos!
-            </section>
-            <hr class="mx-10">
-            <section>
-                <h2 id="subtitle">O que é um evento?</h2>
                 <p>
-                    Um jeito de entender os eventos em JavaScript para uma página web, seria relacionar os eventos aos nervos do corpo humano, 
-                    onde todo estímulo pode (ou não), gerar uma reação.
-                    Cada coisa que você faz dentro de uma página web (apertar alguma tecla no teclado, clicar num item, preencher uma caixa...), 
+                    Agora sim, é pra valer, <span class="tachado">partimos para mais uma Corrida Maluca</span> vamos
+                    falar de Eventos!
                 </p>
             </section>
+            <hr class="my-10">
+            <section>
+                <h2 id="link3" class="subtitle">O que é um evento?</h2>
+                <p>
+                    Um jeito de entender os eventos em JavaScript para uma página web, seria relacionar os eventos aos
+                    nervos do corpo humano,
+                    onde todo estímulo pode (ou não), gerar uma reação.
+                </p>
+                <p>
+                    Cada coisa que você faz dentro de uma página web (apertar alguma tecla no teclado, clicar num item,
+                    preencher uma caixa...),
+                    é um evento, e agora a explicação sobre <strong>Event Listener</strong>:</p>
+                <p class="importante">
+                    Event Listener é um código colocado em um elemento que fica ali esperando pra ver algum evento
+                    acontecer, um exemplo do mundo real,
+                    seria alguém que fica escondido, na surdina, esperando pra ver se alguma coisa acontece.
+                </p>
+            </section>
+            <hr class="my-10">
+            <section>
+                <h2 id="link4" class="subtitle">A primeira vez...</h2>
+                <p>Depois de toda essa conversa (e luta), já estamos tão mais fortes que o monstro é... bem fraquinho
+                </p>
+                <p>O comando para criar um escutador de eventos em um item, é addEventListener(), como toda função, ele
+                    recebe parâmetros, que são dois:
+                    <ul class="my-10">
+                        <li>1) O evento que estamos esperando escutar: Exemplos: click, change, mouseover...</li>
+                        <li>2) A função que será executada quando o evento acontecer.</li>
+                    </ul>
+                </p>
+                <p class="flexy">
+                    Utilizando o elemento do exemplo acima, a escrita do código JavaScript é a seguinte:
+                    <span class="comandos ta-c">
+                        caixaTrybe.addEventListener('nome do evento', função que será chamada)
+                    </span>
+                </p>
+                <p>
+                    Para você começar, clique abaixo na imagem (que é um evento), e ganhe uma caixa com 2 eventos que
+                    você pode utilizar,
+                    além de um link externo para mais elementos, assim você poderá começar a utilizar Event Listeners:
+                    <div class="w-15 mx-auto">
+                        <img class="w-100" id="take-this" src="imagens/take-this.jpeg">
+                    </div>
+                </p>
+                <p class="esconder my-20" id="box-take-this">
+                    <strong class="fs-16">Exemplos de eventos</strong><br>
+                    <strong>click</strong> = Os cliques dados no mouse são capturados e executam a função (como o que
+                    você acabou de fazer).<br>
+                    <strong>change</strong> = Ao alterar o valor de um elemento (exemplo, uma caixa input), a função
+                    passada é executada.<br>
+                    Link com <strong>MUITOS</strong> outros eventos:
+                    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">Clique AQUI</a>
+                </p>
+            </section>
+            <hr class="my-10">
+            <section>
+                <h2 id="link5" class="subtitle">Entendendo a mágica</h2>
+                <p class="flexy">
+                    O código do event listener feito acima está aqui abaixo, vamos passar por ele comentando rapidamente
+                    cada linha:
+                    <span class="comandos">
+                        const imgTakeThis = document.querySelector('#take-this');<br>
+                        const divTakeThis = document.querySelector('#box-take-this');<br>
+                        function abreCaixa () {<br>
+                        divTakeThis.classList.remove('esconder');<br>
+                        }<br>
+                        imgTakeThis.addEventListener('click', abreCaixa)<br>
+                    </span>
+                    A primeira e a segunda linha, pegamos os elementos que queremos trabalhar, no caso, a imagem que
+                    clicamos (imgTakeThis) e a div que queremos que apareça (divTakeThis).<br>
+                    Perceba, que você não é obrigado a fazer alterações no mesmo elemento onde capturou o evento, no
+                    nosso caso, capturamos o evento de clique na imagem e alteramos uma div que não tem ligação direta
+                    com a imagem.<br>
+                    Da terceira a quinta linha, temos a função que está sendo executada quando o evento ocorre, essa
+                    função está removendo uma classe, (trabalhando com CSS dinamicamente) que era a responsável por
+                    esconder a div na página.<br>
+                    E na sexta linha, temos o event listener, sendo colocado na imagem, passando o parametro click, e a
+                    função que queremos executar quando o evento acontece.
+                </p>
+                <p>Após entender o primeiro exemplo, <a href="https://codepen.io/johnatas-henrique/pen/jOEQQvZ"
+                        target="_blank">Clique AQUI</a> e veja um exemplo interativo, nesse exemplo você verá a
+                    diferença entre o evento <strong>'change'</strong> e o evento <strong>'keyup'</strong>.</p>
+            </section>
+            <hr class="my-10">
         </article>
     </main>
 
