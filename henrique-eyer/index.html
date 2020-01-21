@@ -19,21 +19,21 @@
         <p>
           Hoje você aprenderá a usar o <em>Box Model</em> do CSS,
           as propriedades fisicas dos elementos HTML e suas regras.
-          Sendo mais simples, você aprenderá a modificar o design ou layout
-          dos seus elementos HTML mudar seu tamanho, colocar margens ou bordas.
+          De forma mais simples, você aprenderá a modificar o design ou layout
+          dos seus elementos HTML: mudança de tamanho, inserção de margens e/ou bordas.
         </p>
         <h3 id="sub-title">Você será capaz de:</h3>
         <ul>
-          <li>Aprender a mexer com o layout dos elementos HTML e seu funcionamento.</li>
+          <li>Trabalhar o layout dos elementos HTML e entender seu funcionamento.</li>
           <li>Entender o funcionamento do <em>Box Model</em> do CSS.</li>
-          <li>Quais são suas propriedades e o que elas modificam.</li>
+          <li>Conhecer suas propriedades e saber o que elas modificam.</li>
         </ul>
         <h2 id="contents">O que é o Box Model do CSS?</h2>
         <p>
-          São as propriedades que definem o layout e o design de um elemento
-          HTML (ex. uma div).
-          Tradução bruta seria Modelo de Caixa, e que leva a comparação que
-          cada elemento HTML seria como uma caixa,
+          É o conjunto de propriedades que definem o layout e o design de um elemento
+          HTML (por exemplo uma div).
+          A tradução para o português seria Modelo de Caixa, que constrói uma associação de um elemento HTML a uma
+          caixa.
         </p>
         <h4>As 5 principais propriedades dele:</h4>
         <p>
@@ -48,31 +48,33 @@
           <li>Margin (margem)</li>
         </ul>
         <p>
-          A imagem abaixo representa um elemento e como cada propriedade é aplicada nele e cada um com seus valores.
+          A imagem abaixo representa um elemento com as propriedades acima aplicadas nele e o valor correspondente a
+          cada uma delas.
           <div>
             <Img src="images/Border-Box.png">
           </div>
+          <ul>
+            <li>Regiao Laranja é a área da margin com o valor 25px</li>
+            <li>Regiao Amarela é a área da border com o valor 0</li>
+            <li>Regiao Verde é a área do padding com o valor 10px</li>
+            <li>Regiao Azul é a área do conteúdo que seu tamanho é
+              definido pelo width com o valor 500px e height com 400px</li>
+          </ul>
           <br>
-          Dica: clique com o botao direito no quadrado azul e amarelo, e selecionar inspecionar,
-          uma aba irá abir no seu Browser,clique em Elements no canto
-          superior dessa aba e depois em Styles. Esse quadrado que é
-          mostrado é o Box Model do quadrado azul.
+          Dica: clique com o botão direito no quadrado azul e
+          selecione a opção inspecionar, então será aberta uma aba
+          em seu Browser, em seguida clique em Elements no canto
+          superior dessa aba e depois em Styles.
+          O quadrado mostrado é o Box Model do quadrado azul abaixo.
         </p>
         <div class="div-azul">Azul</div>
-        <ul>
-          <li>Regiao Laranja é a área da margin com o valor 25px</li>
-          <li>Regiao Amarela é a área da border com o valor 0</li>
-          <li>Regiao Verde é a área do padding com o valor 10px</li>
-          <li>Regiao Azul é a área do conteúdo que seu tamanho é
-            definido pelo width com o valor 500px e height com 400px</li>
-        </ul>
         <p>
           Entendeu? Se sim, clique <a href="">aqui</a> para ir aos exercícios de fixação.
           <br>
           Para facilitar vamos imaginar que cada elemento HTML é uma pintura em um quadro e que ele está exposto em uma
           galeria de arte.
           <br>
-          Começamos pegando um quadro separadamente.
+          Começaremos pegando um quadro separadamente.
         </p>
         <div>
           <img style="width: 300px;" src="./images/quadroSeparado.jpeg">
@@ -229,10 +231,11 @@
             Agora você precisa separa-las sem o uso de espaço apenas usando as propriedades que aprendemos hoje.
           </li>
           <li>
-              Os exercício está no link. Foi criado no codePen.<br>
-              O CodePen possui campos para adicionar o HTML e o CSS, para resolve-lo basta adicionar o codigo nas janelas de
-              HTML e CSS, criaram o codigo dentro delas.<br>
-              Como na imagem abaixo.
+            Os exercício está no link. Foi criado no codePen.<br>
+            O CodePen possui campos para adicionar o HTML e o CSS, para resolve-lo basta adicionar o codigo nas janelas
+            de
+            HTML e CSS, criaram o codigo dentro delas.<br>
+            Como na imagem abaixo.
             </p>
             <div><img src="./images/CodePen.png" /></div>
             <a href="https://codepen.io/henriqueeyer/pen/rNaQEdZ">Exercício Campo de Futebol</a>
@@ -240,13 +243,14 @@
         </ul>
         <h3>Exercicio Bônus</h3>
         <p>
-          Você montará a sua galeria de arte,qualquer tema, pinturas famosas, abstratos, galeria de fotos, retratos seus, personagens favoritos, etc.
-        <br>
+          Você montará a sua galeria de arte,qualquer tema, pinturas famosas, abstratos, galeria de fotos, retratos
+          seus, personagens favoritos, etc.
+          <br>
           Crie um arquivo index.js e um style.css e comece o projeto!.
         </p>
         <ul>
           <li>
-            Todo quadro precisa ter um  conteúdo dentro,(foto,frase,pintura,uma letra).
+            Todo quadro precisa ter um conteúdo dentro,(foto,frase,pintura,uma letra).
           </li>
           <li>
             Necessita ter uma borda, como se fosse uma moldura.
