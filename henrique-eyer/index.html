@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Student Internship</title>
+</head>
+
+<body>
+  <header>
+    <h1>CSS Box Model</h1>
+  </header>
+  <main>
+    <section>
+      <article>
+        <h2 id="title-article">O que vamos aprender?</h2>
+        <p>
+          Hoje você aprenderá a usar o <em>Box Model</em> do CSS,
+          as propriedades fisicas dos elementos HTML e suas regras.
+          De forma mais simples, você aprenderá a modificar o design ou layout
+          dos seus elementos HTML: mudança de tamanho, inserção de margens e/ou bordas.
+        </p>
+        <h3 id="sub-title">Você será capaz de:</h3>
+        <ul>
+          <li>Trabalhar o layout dos elementos HTML e entender seu funcionamento.</li>
+          <li>Entender o funcionamento do <em>Box Model</em> do CSS.</li>
+          <li>Conhecer suas propriedades e saber o que elas modificam.</li>
+        </ul>
+        <h2 id="contents">O que é o Box Model do CSS?</h2>
+        <p>
+          É o conjunto de propriedades que definem o layout e o design de um elemento
+          HTML (por exemplo uma div).
+          A tradução para o português seria Modelo de Caixa, que constrói uma associação de um elemento HTML a uma
+          caixa.
+        </p>
+        <h4>As 5 principais propriedades dele:</h4>
+        <p>
+          O Box Model consiste nessas 5 propriedades que
+          permitem dimensionamento do elemento:
+        </p>
+        <ul>
+          <li>Width (largura)</li>
+          <li>Height (altura)</li>
+          <li>Padding (prenchimento)</li>
+          <li>Border (borda)</li>
+          <li>Margin (margem)</li>
+        </ul>
+        <p>
+          A imagem abaixo representa um elemento com as propriedades acima aplicadas nele e o valor correspondente a
+          cada uma delas.
+          <div>
+            <Img src="images/Border-Box.png">
+          </div>
+          <ul>
+            <li>Regiao Laranja é a área da margin com o valor 25px</li>
+            <li>Regiao Amarela é a área da border com o valor 0</li>
+            <li>Regiao Verde é a área do padding com o valor 10px</li>
+            <li>Regiao Azul é a área do conteúdo que seu tamanho é
+              definido pelo width com o valor 500px e height com 400px</li>
+          </ul>
+          <br>
+          Dica: clique com o botão direito no quadrado azul e
+          selecione a opção inspecionar, então será aberta uma aba
+          em seu Browser, em seguida clique em Elements no canto
+          superior dessa aba e depois em Styles.
+          O quadrado mostrado é o Box Model do quadrado azul abaixo.
+        </p>
+        <div class="div-azul">Azul</div>
+        <h3>Entendeu? Se sim, clique <a href="#AddValores">aqui</a> para ir para "Adicionando valores às propriedades"
+        </h3>
+        <p>
+          <br>
+          Para facilitar vamos imaginar que cada elemento HTML é uma pintura em um quadro e que ele está exposto em uma
+          galeria de arte.
+          <br>
+          Começaremos pegando um quadro separadamente.
+        </p>
+        <div>
+          <img style="width: 300px;" src="./images/quadroSeparado.jpeg">
+        </div>
+        <p>
+          Observe que ele possui várias partes que podem ser separadas. Trabalharemos inicialmente com 3 delas. A
+          <strong>Pintura</strong> , que está no centro, a <strong>Tela</strong>, que abriga a pintura e a
+          <strong>Moldura</strong>, que envolve a <strong>Tela</strong>.
+        </p>
+        <p>
+          Cada parte dessas pode ser comparada a uma propriedade do Box Model.
+          <ul>
+            <li>
+              A <strong>Pintura</strong> seria o conteúdo do elemento: textos, imagens ou ainda outros. Uma pintura
+              possui dimensões; essa, por exemplo, possui
+              50 cm de altura e 40 cm de largura.
+              De modo semelhante se comporta o elemento, porém, suas dimensões podem ser definidas por você,
+              por meio das propriedades <strong>Width</strong> e <strong>Height</strong>.
+              <div>Ex: width: 400px,
+                height: 300px</div>
+            </li>
+            <li>
+              A <strong>Tela</strong> é a parte entre a moldura e a pintura, no exemplo acima ela tem a cor branca e sua
+              função é
+              destacar a pintura e mantê-la em um melhor posicionamento. Em nossa comparação, ela seria o
+              <strong>Padding</strong>:
+              espaçamento entre o conteúdo interno e a borda do elemento HTML. Ela não está obrigatoriamente
+              centralizada,
+              se for necessário que esteja mais à esquerda basta diminuir o <strong>Padding</strong> de um só lado, como
+              será visto mais adiante.
+            </li>
+            <li>
+              A <strong>Moldura</strong> seria a <strong>Border</strong> do elemento. Ela pode ser de tipos, tamanhos e
+              cores variados,
+              o mesmo ocorre com a <strong>Border</strong> do elemento HTML, que pode assumir tamanhos,
+              cores e estilos distintos, de acordo com a preferência e a necessidade de quem a constrói.
+            </li>
+          </ul>
+        </p>
+        <p>
+          Para o propriedade da <strong>Margin</strong> precisamos analisar a imagem a abaixo.
+        </p>
+        <div>
+          <img src="./images/Quadro.jpeg">
+        </div>
+        <p>
+          <li>Sabe-se que em uma galeria de arte quadro algum fica muito próximo ao outro. Há sempre uma distância vista
+            entre eles, como é observado na imagem acima.
+            A <strong>Margin</strong> constitui esse espaço a ser respeitado entre os elementos de sua página, isso
+            ocorre para que haja harmonia visual e
+            para que cada um deles possa se destacar individualmente revelando o que tem para oferecer,
+            isso também gera organização.
+          </li>
+        </p>
+        <h3 id="AddValores"> Adicionando valores às propriedades</h3>
+        <p>
+          Como definir valores para elas?
+          <ul>
+            <li>
+              <p>
+                É simples atribuir valores ao height e ao width, uma vez que cada um deles possui apenas um valor.<br>
+                Exemplo:
+                <div class="cod-div">.div-color: {<br>
+                  width: 200px;<br>
+                  height: 100px;<br>
+                  }
+                </div>
+                <br>
+                Obs: a medida utilizada para os números não precisa ser necessariamente px (pixel).
+                Há outras que podem ser utilizadas,
+                como: porcentagem do elemento pal (%), a porcentagem da tela do browser do usuário,
+                vw (viewPort width) e vh (viewPort height).
+              </p>
+            </li>
+            <li>
+              As outras propriedades podem ser declaradas igual ao width e ao height, mas todos os lados possuirão o
+              mesmo valor (como na div da <a href="">dica</a>).
+              Você pode declarar um valor apenas para um lado, por exemplo:
+              <br>
+              Você pode declara apenas para um lado um valor, por exemplo:
+              <div class="div-verde">Verde</div>
+              Nessa div, todos os <strong>padding</strong> estão com um único valor:
+              <div class="cod-div"><br>.div-verde: {<br>
+                background: green;<br>
+                border: 2px solid black;<br>
+                font-size: 30px;<br>
+                margin: 5px;<br>
+                <strong>padding: 20px;</strong><br>
+                width: 80px;<br>
+                }
+              </div><br>
+              O <strong>padding</strong> também pode ser declarado assim:
+              <br><em class="spotlight">padding: 20 20 20 20px</em><br>
+              O resultado permanece igual. Porém podemos também fazer modificações:<br><br>
+              <div class="div-verde-change">Verde</div>
+              <div class="cod-div"><br>.div-verde: {<br>
+                background: green;<br>
+                <strong>border: 2px solid black;</strong><br>
+                font-size: 30px;<br>
+                margin: 5px;<br>
+                <strong>padding:0 20 20 20px;</strong><br>
+                width: 80px;<br>
+                }
+              </div><br>
+              Modificando dessa forma podemos ver que o padding superior ficou zerado (pode ser percebido na inspeção do
+              elemento)
+              e com isso o conteudo(Verde) está quase colado no topo do elemento.<br>
+              Quando colocamos esses quatro valores (0 20 20 20), o 0 seria o topo e continuaria em ordem horaria.<br>
+              top->right->bottom->left (topo->direita->baixo->esquerda)
+            </li>
+            <li>
+              Cada lado possui um nome específico, caso queira mudar somente a margin superior, é necessário colocar
+              margin-top.
+            </li>
+            <li>
+              Abaixo estão os nomes específicos de cada área:
+            </li>
+            <img src="./images/Boxmodell-detail.png">
+            <li>
+              A Border possui outros valores a serem adicionados: estilo e cor.
+              Pode-se ver como a Border do exemplo anterior foi declarada:
+              <br> Exemplo: <br>
+              border: 3px dotted green;
+            </li>
+          </ul>
+        </p>
+        <h3>Cuidado!</h3>
+        <p>Lembre que o tamanho total do seu elemento sempre será:
+          <br>
+          Largura Total = width + padding-left + padding-right +border-left + border-right.
+          <br>
+          Para a Altura isso se repete, basta trocar right e left por top e bottom e width por height.
+          <br>
+          Para resolver esse problema poderá ser usada a propriedade box-sizing: border-box.
+        </p>
+
+        <h3>Exercícios para fixação</h3>
+
+        <p>Estes exercícios te ajudarão a guardar o conteúdo e como usar cada uma das propriedades.<br>
+          Crie um arquivo index.html e um style.css no seu computador. Os exercícios devem ser resolvidos lá.
+          Para cada exercício uma div deverá ser criada.
+        </p>
+        <ul>
+          <li>
+            Exercício-1: Crie um quadrado de lado de 300px.
+          </li>
+          <li>
+            Exercício-2: Reproduza a div abaixo ,use padding e width para isso. Exerc2 Precisa estar centralizado.
+            <div>
+              <img src="./images/divExerc2.png" />
+            </div>
+          </li>
+          <li>
+            Exercício-3: Crie 3 div com o mesmo css do último exercício,
+            as duas primeiras você deverá criar uma borda diferente para cada uma das duas primeiras,
+            nenhum dos valores da borda podem se repetir. Na terceira div você precisa adicionar na borda superior
+            uma borda diferente das restantes.
+          </li>
+          <li>
+            Exercício-4: Escreva seu nome completo sem o uso de espaço, e coloque uma tag span em cada palavra do seu
+            nome.<br>
+            Exemplo: *span*Manuel*/span**span*Ferreira*span*.
+            Agora você precisa separá-las sem o uso de espaço apenas usando as propriedades que aprendemos hoje.
+          </li>
+          <li>
+            O exercício está no link. Foi criado no codePen.<br>
+            O CodePen possui campos para adicionar o HTML e o CSS, para resolve-ló basta adicionar o codigo nas janelas
+            de
+            HTML e CSS.<br>
+            <a href="https://codepen.io/henriqueeyer/pen/rNaQEdZ">Exercício Campo de Futebol</a><br><br>
+            <br>
+            Como na imagem abaixo.
+            </p>
+            <div><img src="./images/CodePen.png" /></div>
+            
+
+            <br>
+            <h3>Gabaritos</h3>
+            <br>
+            <a href="https://codepen.io/henriqueeyer/pen/MWYZWyE">Gabarito Exercicios Fixação</a>
+            <br>
+            <a href="https://codepen.io/henriqueeyer/pen/XWJyLEx">Gabarito Campo de Futebol</a>
+          </li>
+        </ul>
+        <h3>Exercício Bônus</h3>
+        <p>
+          Você montará a sua galeria de arte com qualquer tema: pinturas famosas, pinturas abstratas, galeria de fotos,
+          retratos seus, seus personagens favoritos, etc.
+          <br>
+          Crie um arquivo index.js e um style.css e comece o projeto!.
+        </p>
+        <ul>
+          <li>
+            Todo quadro precisa ter um conteúdo dentro (foto, frase, pintura, uma letra).
+          </li>
+          <li>
+            Necessita ter uma borda, como se fosse uma moldura.
+          </li>
+          <li>
+            Você deve fazer pelo menos 4 quadros e a posição deles fica a seu critério.
+          </li>
+          <li>
+            Você deve usar todas as propriedades aprendidas no conteúdo.
+          </li>
+        </ul>
+        <br>
+        <h2 id="recursos-adicionais-opcional">Recursos adicionais (opcional)</h2>
+        <p>
+          Algumas coisas adicionais sobre o conteúdo, caso seja interessante para você.
+        </p>
+        <br>
+        <ul>
+          <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/box_model">DevMoz Sempre ajudando</a>
+          </li>
+          <li>
+            <a
+              href="https://medium.com/free-code-camp/css-box-model-explained-by-living-in-a-boring-suburban-neighborhood-9a9e692773c1">Medium
+              Post, css-box-model-explained-by-living-in-a-boring-suburban-neighborhood</a>
+          </li>
+          <li>
+            <a href="https://internetingishard.com/html-and-css/css-box-model/">CSS Box Model Tutorial | HTML & CSS Is Hard</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/box-sizing">box-sizing - CSS | MDN</a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>
