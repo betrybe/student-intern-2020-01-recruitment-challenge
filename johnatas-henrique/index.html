@@ -21,6 +21,8 @@
                     <li><a href="#link3">O que é um evento?</a></li>
                     <li><a href="#link4">A primeira vez...</a></li>
                     <li><a href="#link5">Entendendo a mágica</a></li>
+                    <li><a href="#link6">Exercícios de fixação</a></li>
+                    <li id="nav-gabarito" class="esconder"><a href="#link7">Gabarito dos exercícios</a></li>
                 </ul>
             </div>
         </aside>
@@ -30,21 +32,23 @@
             <section>
                 <h2 id="link1" class="subtitle">No início era...</h2>
                 <p>
-                    Bom, pra começarmos, que tal entender a estrutura básica de um site e depois o que é um Event
-                    (evento),
-                    sabendo isso, o resto ficará muito mais fácil.
+                    Para começarmos bem, vamos entender a estrutura básica de um site e depois o que é um Event
+                    (evento),pois sabendo isso, o resto ficará muito mais fácil.
                     Normalmente para fazer um site, temos 3 itens:
                     <ul class="my-10">
                         <li>
-                            1) HTML, que normalmente é o responsável pelo conteúdo em si do site e a estruturação do
+                            1) <strong>HTML</strong> que normalmente é o responsável pelo conteúdo em si do site e a
+                            estruturação do
                             mesmo.
                         </li>
                         <li>
-                            2) CSS, que responde pela estilização (tamanhos, cores, posicionamento dos itens...) do
+                            2) <strong>CSS</strong> que responde pela estilização (tamanhos, cores, posicionamento dos
+                            itens...) do
                             site.
                         </li>
                         <li>
-                            3) JavaScript, que faz a <span class="tachado">magia negra</span> criação de conteúdo que se
+                            3) <strong>JavaScript</strong> que faz a <span class="tachado">magia negra</span> criação de
+                            conteúdo que se
                             atualiza
                             dinamicamente, dá vida a caixas de texto, botões, imagens e por aí vai, quase tudo o que
                             parece
@@ -55,13 +59,13 @@
                 </p>
                 <p>
                     Após saber mais sobre a tríade que cria os sites, você também precisa saber que o JavaScript
-                    consegue
-                    trabalhar o CSS e o HTML dinamicamente, em tese, um programador poderia fazer todo um site
-                    apenas com JS (apesar de ser mais tranquilo para um iniciante usar um pouco de cada uma das três),
-                    <span class="tachado">não façam isso em casa</span>.
+                    consegue trabalhar o CSS e o HTML dinamicamente. Em tese, um programador poderia fazer todo um site
+                    apenas com JavaScript, apesar de ser mais tranquilo para um iniciante usar um pouco de cada uma das
+                    três linguagens.
                 </p>
                 <p class="my-10">
-                    Também é importante saber o conceito de DOM, (Document Object Model), porque é através dele que você
+                    Também é importante saber o conceito de DOM, (Document Object Model), por que é através dele que
+                    você
                     consegue utilizar todo o poder que o JS pode te proporcionar, incluindo os Event Listeners que ainda
                     não
                     sabemos o que é, não é mesmo?
@@ -75,7 +79,7 @@
                     Listener?
                 </p>
                 <p class="importante my-10">
-                    Todo evento, trabalha em cima do DOM, então se você não tiver idéia do que é o DOM,
+                    Todo evento trabalha em cima do DOM, então se você não tiver ideia do que é o DOM,
                     você simplesmente não tem como escolher que elemento quer alterar, ou então, onde quer inserir seu
                     novo
                     elemento.
@@ -87,7 +91,7 @@
                 <p class="flexy">
                     Calma lá que estamos chegando, no caso, todo elemento que você coloca na página (um bloco (div), um
                     parágrafo de texto (p), uma caixa de
-                    texto (input), pode ser acessado pelo seu próprio nome de elemento, por uma classe CSS ou por um ID
+                    texto (input), pode ser acessado pelo seu próprio nome de elemento, por uma classe CSS ou por um id
                     CSS,
                     então a maneira que você escreve seu HTML, pode te ajudar muito a trabalhar mais facilmente com o
                     JS.<br>
@@ -100,19 +104,20 @@
                     <span class="comandos">document.querySelector()</span>
 
                     Vamos lá, o que isso faz:<br>
-                    Esse comando é o pegador de objetos do JavaScript, lembra que falamos sobre pegar um elemento por id
+                    Esse comando é o pegador de objetos do JavaScript, lembre que falamos no parágrafo anterior sobre
+                    pegar um elemento por id
                     ou classe,
-                    dentro dos parenteses desse comando, vc digita o ID ou classe e ele te retorna o elemento para
+                    dentro dos parenteses desse comando, você digita o id ou classe e ele te retorna o elemento para
                     utilizar, temos abaixo o
-                    exemplo de uma caixa input e do código dela em HTML, onde podemos ver a ID da caixa e onde colocamos
-                    o ID no comando,
+                    exemplo de uma caixa input e do código dela em HTML, onde podemos ver a id da caixa e onde colocamos
+                    o id no comando,
                     um bônus seria colocar o resultado dentro de uma variável, como no exemplo abaixo:
 
                     <span class="comandos ta-c">
                         HTML:<br>
                         <span class="some">'</span>
                         <<span class="some">'
-                    </span>type="text" value="Trybe" id="caixa-de-texto"><br><br>
+                    </span>input type="text" value="Trybe" id="caixa-de-texto"><br><br>
                     JavaScript:<br>
                     const caixaTrybe = document.querySelector('#caixa-de-texto');
                     </span>
@@ -126,9 +131,9 @@
             <section>
                 <h2 id="link3" class="subtitle">O que é um evento?</h2>
                 <p>
-                    Um jeito de entender os eventos em JavaScript para uma página web, seria relacionar os eventos aos
+                    Um jeito de entender os eventos em JavaScript para uma página web, seria relacioná-los aos
                     nervos do corpo humano,
-                    onde todo estímulo pode (ou não), gerar uma reação.
+                    onde todo estímulo pode (ou não) gerar uma reação.
                 </p>
                 <p>
                     Cada coisa que você faz dentro de uma página web (apertar alguma tecla no teclado, clicar num item,
@@ -137,15 +142,16 @@
                 <p class="importante">
                     Event Listener é um código colocado em um elemento que fica ali esperando pra ver algum evento
                     acontecer, um exemplo do mundo real,
-                    seria alguém que fica escondido, na surdina, esperando pra ver se alguma coisa acontece.
+                    seria alguém que fica escondido na espreita, esperando pra ver se alguma coisa acontece.
                 </p>
             </section>
             <hr class="my-10">
             <section>
                 <h2 id="link4" class="subtitle">A primeira vez...</h2>
-                <p>Depois de toda essa conversa (e luta), já estamos tão mais fortes que o monstro é... bem fraquinho
+                <p>Depois de toda essa conversa (e luta), já estamos tão mais fortes que o monstro é... bem fraquinho.
                 </p>
-                <p>O comando para criar um escutador de eventos em um item, é addEventListener(), como toda função, ele
+                <p>O comando para criar um escutador de eventos em um elemento, é <strong>addEventListener()</strong> e
+                    como toda função, ele
                     recebe parâmetros, que são dois:
                     <ul class="my-10">
                         <li>1) O evento que estamos esperando escutar: Exemplos: click, change, mouseover...</li>
@@ -162,7 +168,7 @@
                     Para você começar, clique abaixo na imagem (que é um evento), e ganhe uma caixa com 2 eventos que
                     você pode utilizar,
                     além de um link externo para mais elementos, assim você poderá começar a utilizar Event Listeners:
-                    <div class="w-15 mx-auto">
+                    <div class="w-25 mx-auto">
                         <img class="w-100" id="take-this" src="imagens/take-this.jpeg">
                     </div>
                 </p>
@@ -173,7 +179,8 @@
                     <strong>change</strong> = Ao alterar o valor de um elemento (exemplo, uma caixa input), a função
                     passada é executada.<br>
                     Link com <strong>MUITOS</strong> outros eventos:
-                    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">Clique AQUI</a>
+                    <a class="link-colors" href="https://www.w3schools.com/jsref/dom_obj_event.asp"
+                        target="_blank">Clique AQUI</a>
                 </p>
             </section>
             <hr class="my-10">
@@ -201,14 +208,108 @@
                     E na sexta linha, temos o event listener, sendo colocado na imagem, passando o parametro click, e a
                     função que queremos executar quando o evento acontece.
                 </p>
-                <p>Após entender o primeiro exemplo, <a href="https://codepen.io/johnatas-henrique/pen/jOEQQvZ"
-                        target="_blank">Clique AQUI</a> e veja um exemplo interativo, nesse exemplo você verá a
+                <p class="my-10">Após entender o primeiro exemplo, <a class="link-colors"
+                        href="https://codepen.io/johnatas-henrique/pen/jOEQQvZ" target="_blank">Clique AQUI</a> e veja
+                    um exemplo interativo, nele você verá a
                     diferença entre o evento <strong>'change'</strong> e o evento <strong>'keyup'</strong>.</p>
+                <p>
+                    Agora que vimos os exemplos, vamos de exercícios para treinarmos a utilização, mas antes dos
+                    exercícios, algumas dicas:
+                    <ul class="my-10">
+                        <li class="list-style-ul">Você pode colocar quantos event listeners quiser em um mesmo elemento;
+                        </li>
+                        <li class="list-style-ul">Você pode fazer uma função anônima dentro do próprio event listener,
+                            ao invés de uma função separada;</li class="list-style-ul">
+                    </ul>
+                </p>
             </section>
             <hr class="my-10">
+            <section>
+                <h2 id="link6" class="subtitle">Exercícios de fixação</h2>
+                <p>
+                    Para os exercícios, utilizaremos outros links do CodePen.
+                    Nos três primeiros, você não precisará alterar nada no HTML e no CSS, focando apenas nos event
+                    listeners.<br>
+                    No quarto exercício, também não precisará alterar nada no HTML e no CSS mas terá que escrever todo o
+                    JS.<br>
+                    Exercício 1 - <a class="link-colors" href="https://codepen.io/johnatas-henrique/pen/xxbQeOb"
+                        target="_blank">Clique AQUI</a><br>
+                    Exercício 2 - <a class="link-colors" href="https://codepen.io/johnatas-henrique/pen/oNgQOoY"
+                        target="_blank">Clique AQUI</a><br>
+                    Exercício 3 - <a class="link-colors" href="https://codepen.io/johnatas-henrique/pen/bGNQJXZ"
+                        target="_blank">Clique AQUI</a><br>
+                    Exercício 4 - <a class="link-colors" href="https://codepen.io/johnatas-henrique/pen/jOEQovq"
+                        target="_blank">Clique AQUI</a><br>
+                </p>
+                <p>
+                    Para visualizar o gabarito, escreva sem aspas "RESPOSTAS" na caixa abaixo, um último event listener.
+                    <div class="ta-c my-10">
+                        <input type="text" id="caixa-gabarito">
+                    </div>
+                </p>
+            </section>
+            <hr class="my-10">
+            <section id="div-gabarito" class="esconder">
+                <h2 id="link7" class="subtitle">Gabarito dos exercícios</h2>
+                <p class="ta-c">
+                    Exercício 1:<br>
+                    <span class="comandos">
+                        caixaUm.addEventListener('click', trocaCor);
+                    </span>
+                </p>
+                <p class="ta-c">
+                    Exercício 2:<br>
+                    <span class="comandos">
+                        caixaUm.addEventListener('click', trocaCor);<br>
+                        caixaDois.addEventListener('dblclick', changeColors);
+                    </span>
+                </p>
+                <p class="ta-c">
+                    Exercício 3:<br>
+                    <span class="comandos">
+                        caixaTexto.addEventListener('keyup', trocaTextoA);<br>
+                        caixaTexto.addEventListener('change', trocaTextoB);
+                    </span>
+                </p>
+                <p class="ta-c">
+                    Exercício 4:<br>
+                    <span class="comandos">
+                        const caixaTexto = document.querySelector('.caixa-texto');<br>
+                        const caixaUm = document.querySelector('.caixa1');<br>
+                        const caixaDois = document.querySelector('.caixa2');<br>
+                        const botaoUm = document.querySelector('.botao1');<br>
+                        const botaoDois = document.querySelector('.botao2');<br>
+                        function mouseCxUm () {<br>
+                        caixaUm.style.backgroundColor = 'green';<br>
+                        }<br>
+                        function mouseCxDois () {<br>
+                        caixaDois.style.backgroundColor = 'green';<br>
+                        }<br>
+                        function clickCxUm () {<br>
+                        caixaUm.innerText = caixaTexto.value;<br>
+                        }<br>
+                        function clickCxDois () {<br>
+                        caixaDois.innerText = caixaTexto.value;<br>
+                        }<br>
+                        function colarTrybe () {<br>
+                        alert('Go Trybe!');<br>
+                        }<br>
+                        botaoUm.addEventListener('mouseover', mouseCxUm);<br>
+                        botaoDois.addEventListener('mouseover', mouseCxDois);<br>
+                        botaoUm.addEventListener('click', clickCxUm);<br>
+                        botaoDois.addEventListener('click', clickCxDois);<br>
+                        caixaTexto.addEventListener('paste', colarTrybe);<br>
+                    </span>
+                </p>
+            </section>
+
         </article>
     </main>
-
+    <footer class="my-10">
+        <div class="ta-c">
+            Trybe 2020 - Criado por Johnatas Henrique
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
