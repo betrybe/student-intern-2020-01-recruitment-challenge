@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#caixa-gabarito {
+    border: 1px solid black;
+}
+
+li {
+    list-style: none;
+}
+
+.ta-c>li {
+    text-align: center;
+}
+
+a,
+a:visited {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.list-style-ul {
+    list-style: square inside;
+    margin-left: 8px;
+}
+
+.link-colors,
+.link-colors:visited {
+    color: white;
+    background-color: rgb(15, 163, 107);
+}
+
+.link-colors:hover {
+    color: rgb(15, 163, 107);
+    background-color: white;
+}
+
+a:hover {
+    color: rgb(15, 163, 107);
+    font-weight: 700;
+    padding: 0 20px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+p,
+li,
+strong {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+.para-cego-ver {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.esconder {
+    display: none;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+.fs-16 {
+    font-size: 1.6rem;
+}
+
+.my-10 {
+    margin: 10px 0;
+}
+
+.my-20 {
+    margin: 20px 0;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.some {
+    background-color: rgba(255, 255, 255, 0.0);
+    color: rgba(255, 255, 255, 0.0);
+}
+
+.title,
+.subtitle {
+    text-align: center;
+    margin: 20px 0 15px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.container {
+    display: flex;
+}
+
+section {
+    border: 2px solid rgb(15, 163, 107);
+    padding: 1%;
+}
+
+.nav-list {
+    width: 25%;
+    padding: 1% 0.4%;
+}
+
+.sticky {
+    position: sticky;
+    top: 100px;
+}
+
+.content {
+    width: 75%;
+    padding: 1%;
+}
+
+.tachado {
+    text-decoration: line-through;
+    font-style: oblique;
+    font-size: 1.1rem;
+}
+
+.comandos {
+    background-color: rgba(180, 180, 180, 0.8);
+    border-radius: 2px;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 4px 10px;
+    border: 1px solid black;
+}
+
+.flexy {
+    display: flex;
+    flex-direction: column;
+}
+
+.importante {
+    font-size: 1.5rem;
+    font-style: italic;
+}
